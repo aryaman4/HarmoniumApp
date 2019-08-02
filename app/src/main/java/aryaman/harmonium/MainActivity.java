@@ -1,45 +1,40 @@
 package aryaman.harmonium;
 
-import android.media.MediaPlayer;
+import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+import java.util.HashMap;
+import java.util.Map;
 
-    private MediaPlayer mp;
+public class MainActivity extends AppCompatActivity {
+
+    private Map<String, String> scaleMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button saButton = (Button) findViewById(R.id.saButton);
-        saButton.setOnTouchListener(this);
-        mp = MediaPlayer.create(this, R.raw.hedwig);
+        scaleMap.put("C#", "8");
+        scaleMap.put("D#", "9");
+        Button subButton = (Button) findViewById(R.id.subButton);
+        final TextInputLayout sendText = (TextInputLayout) findViewById(R.id.scale_text);
+        subButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NavActivity.class);
+                String scale_str = sendText.getEditText().getText().toString();
+                String scale = scaleMap.getOrDefault(scale_str, "9");
+                Log.d("Scale", ""+scale);
+                intent.putExtra("Message", scale);
+                startActivity(intent);
+            }
+        });
 
     }
-    @Override
-    public boolean onTouch (View v, MotionEvent event) {
-        switch (event.getAction())
-        {
 
-            case MotionEvent.ACTION_DOWN:
-            {
-                mp.setLooping(true);
-                mp.start();
-            }
-
-            break;
-            case MotionEvent.ACTION_UP:
-            {
-                mp.pause();
-            }
-            break;
-        }
-
-        return true;
-    }
 }

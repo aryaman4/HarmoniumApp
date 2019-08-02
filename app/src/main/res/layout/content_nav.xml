@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".NavActivity"
+tools:showIn="@layout/app_bar_nav">
+
+<ScrollView
+    android:id="@+id/scrollView2"
+    android:layout_width="368dp"
+    android:layout_height="905dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginEnd="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:visibility="invisible"></Space>
+        
+        <Button
+            android:id="@+id/saButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:text="Sa" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:visibility="invisible"></Space>
+
+        <Button
+            android:id="@+id/reButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#e957f4"
+            android:text="Re" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/gaButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#31d636"
+            android:text="Ga" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/maButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#f4903e"
+            android:text="Ma" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/paButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#f1e952"
+            android:text="Pa" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/dhaButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#af5ef5"
+            android:text="Dha" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/niButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#6c696c"
+            android:text="Ni" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"></Space>
+
+        <Button
+            android:id="@+id/hsaButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#3454e6"
+            android:text="Sa" />
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>
