@@ -28,7 +28,7 @@ tools:showIn="@layout/app_bar_nav">
             android:layout_height="25dp"
             android:layout_weight="1"
             android:visibility="invisible"></Space>
-        
+
         <Button
             android:id="@+id/saButton"
             android:layout_width="60dp"

@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         scaleMap.put("C#", "8");
         scaleMap.put("D#", "9");
+        scaleMap.put("E#", "10");
         Button subButton = (Button) findViewById(R.id.subButton);
         final TextInputLayout sendText = (TextInputLayout) findViewById(R.id.scale_text);
         subButton.setOnClickListener(new View.OnClickListener() {
